@@ -1,6 +1,7 @@
 
 export default function Basket({ basket=[] }) {
-
+  console.log(basket);
+  
   return (
 
     <>

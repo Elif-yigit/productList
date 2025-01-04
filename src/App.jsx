@@ -63,34 +63,30 @@ function removeBasket (product) {
 }
 
   return (
-    <>
-  
- { product.map((product) => (
+  <>
+  { product.map((product) => (
 
-<div key={product.name} className='container'>
-    <img 
-    src={product.icon} />
-    <div className='btn'>
-    <button onClick={() => removeBasket(product)} >-</button>
-     <img
-     src={product.image}
-     />
-    <button onClick={() => addBasket(product) }>+</button>
-    </div>
-    <div >{product.name}</div>
-    <p>{product.category}</p>
-    <span>{product.price} </span>
+      <div key={product.name} className='container'>
+        <img 
+        src={product.icon} />
+        <div className='btn'>
+        <button disabled={!basket.find(x => x.name == product.name)} onClick={() => removeBasket(product)} >-</button>
+        <img
+        src={product.image}
+        />
+        <button onClick={() => addBasket(product) }>+</button>
+        </div>
+        <div >{product.name}</div>
+        <p>{product.category}</p>
+        <span>{product.price} </span>
 
 
+        </div>
+      )
+      
+    )}
     <Basket basket={basket} />
-    </div>
-
-   
-
-  )
-     
-  )}
-    </>
+  </>
   )
 }
 

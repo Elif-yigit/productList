@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import  product  from "./data";
 import './App.css'
-import basket from './components/sepet';
+// import basket from './components/sepet';
 import Basket from './components/sepet';
 import { use } from 'react';
 
